@@ -1,14 +1,13 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function Footer() {
   return (
     <div>
       <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
   <nav class="grid grid-flow-col gap-4">
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
+  <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
+  <NavLink to="/courses" className={({ isActive }) => isActive ? "active" : ""}>Courses</NavLink>
   </nav>
   <nav>
     <div class="grid grid-flow-col gap-4">

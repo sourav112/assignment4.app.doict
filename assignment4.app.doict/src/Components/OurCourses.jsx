@@ -1,4 +1,6 @@
+
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const OurCourses=() => {
     const[courses, setCourses]=useState([]);
@@ -20,7 +22,7 @@ const OurCourses=() => {
         {
             courses.map((course)=>(
                 
-                <div class="card bg-base-100 w-96 shadow-xl">
+                <div class="card bg-base-100 w-96 shadow-xl m-5">
                 <figure class="px-10 pt-10">
                     <img
                     src={course.img_url}
@@ -29,9 +31,13 @@ const OurCourses=() => {
                 </figure>
                 <div class="card-body items-center text-center">
                     <h2 class="card-title">{course.title}</h2>
-                    <p>{course.details}</p>
+                    
+                        <p>{course.details.slice(0,100)}</p>
+                    
+                    
                     <div class="card-actions">
-                    <button class="btn btn-primary">Get Details</button>
+
+                    <Link to={`/course/${course.course_id}`}><button class="btn btn-primary">Get Details</button></Link>
                     </div>
                 </div>
                 </div>

@@ -18,8 +18,8 @@ export default function Navbar() {
     </ul>
   </div>
   <div class="navbar-end gap-4">
-    <button class="btn btn-outline btn-success">Login</button>
-    <button class="btn btn-outline btn-warning">Register</button>
+    <Link to="/login"><button class="btn btn-outline btn-success">Login</button></Link>
+    <Link to="/registration"><button class="btn btn-outline btn-warning">Register</button></Link>
 
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
