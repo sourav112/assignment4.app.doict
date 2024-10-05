@@ -6,7 +6,7 @@ export default function HowWorks() {
         <div className='bg-blue-300 m-2'>
             <p className='items-center text-2xl p-2'>How Works</p>
         </div>
-        <div className='grid grid-cols-3 space-x-3'>
+        <div className='grid md:grid-cols-3 space-x-3 sm: grid-cols-1'>
         <div class="card bg-base-100 shadow-xl">
   <figure class="px-10 pt-10">
     <img

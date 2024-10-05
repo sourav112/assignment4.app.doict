@@ -16,7 +16,7 @@ const OurCourses=() => {
         <div className='bg-blue-300 m-2'>
             <p className='items-center text-2xl p-2'>Our {courses.length} Courses</p>
         </div>
-        <div className='grid grid-cols-3 space-x-3'>
+        <div className='grid md:grid-cols-3 space-x-3 sm: grid-cols-1'>
         {
             courses.map((course)=>(
                 
