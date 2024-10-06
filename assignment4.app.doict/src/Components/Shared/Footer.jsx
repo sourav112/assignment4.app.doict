@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <div>
+    <div className='mt-5'>
       <footer class="footer footer-center bg-blue-200 text-base-content rounded p-10">
   <nav class="grid grid-flow-col gap-4">
   <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
