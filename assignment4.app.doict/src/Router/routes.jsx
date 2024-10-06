@@ -23,7 +23,7 @@ const router=createBrowserRouter([
                 path:`/course/:id`,
                 element:<ProductDetailPage/>,
                 loader:({params})=>
-                    fetch(`http://localhost:5000/course/${params.id}`),
+                    fetch(`https://assignment4serverdoict.vercel.app/course/${params.id}`),
                 
             },
             {

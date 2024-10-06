@@ -1,8 +1,25 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
+
 import logo from '../../assets/logo.png'
+import userPic from "../../assets/user.png";
+
+import { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 
 export default function Navbar() {
+  const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
   <div className="navbar bg-base-100 fixed top-0 w-3/4 z-10">
   <div className="navbar-start">
@@ -18,9 +35,33 @@ export default function Navbar() {
     </ul>
   </div>
   <div class="navbar-end gap-4">
-    <Link to="/login"><button class="btn btn-outline btn-success">Login</button></Link>
-    <Link to="/registration"><button class="btn btn-outline btn-warning">Register</button></Link>
+    {
+      user?(
+  <div className="w-10 rounded-full">
+        <img alt="User" src={user.photoURL} />
+  </div>
+)
+:(
+<div className="w-10 rounded-full">
+        <img alt="User" src={userPic} />
+  </div>
+)}
+  {user && <span className="text-red-600 mr-3">{user.displayName}</span>}
 
+  {user ? (
+          <button
+            onClick={handleSignOut}
+            className="btn btn-sm btn-outline btn-success text-md rounded-none"
+          >
+            Logout
+          </button>
+        ) : (
+          <div>
+           
+    <Link to="/login"><button class="btn btn-outline btn-success">Login</button></Link>
+    <Link to="/registration" className='ml-2'><button class="btn btn-outline btn-warning">Register</button></Link>
+    </div>
+  )}
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
         <svg

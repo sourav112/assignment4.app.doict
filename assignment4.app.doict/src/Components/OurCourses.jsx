@@ -5,9 +5,15 @@ import { Link } from 'react-router-dom';
 const OurCourses=() => {
     const[courses, setCourses]=useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/course`)
+        fetch(
+            `https://assignment4serverdoict.vercel.app/course`
+        )
         .then((res)=>res.json())
         .then((data)=>setCourses(data))
+        .catch(function(error) {
+            console.log('Error',error)
+    })
+
         
 
     },[]);
