@@ -21,26 +21,26 @@ const OurCourses=() => {
   return (
     <div>
         <div>
-        <div className='bg-blue-300 m-2'>
-            <p className='items-center text-2xl p-2'>Our {courses.length} Courses</p>
+        <div className='bg-blue-300 mt-16'>
+            <p className='text-center text-2xl p-2'>Our {courses.length} Courses</p>
         </div>
-        <div className='grid md:grid-cols-3 space-x-3 sm: grid-cols-1'>
+        <div className='grid md:grid-cols-3 space-x-1 sm: grid-cols-1'>
         {
             courses.map((course)=>(
                 
-                <div class="card bg-base-100 w-96 shadow-xl mt-5">
+                <div class="card bg-base-100 shadow-xl mt-5">
                 <figure class="px-10 pt-10">
                     <img
                     src={course.img_url}
                     alt={course.assessments}
-                    width="300"
-                    height="300"
+                    width="200"
+                    height="200"
                     class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
                     <h2 class="card-title">{course.title}</h2>
                     
-                        <p>{course.details.slice(0,100)}</p>
+                        <p className='text-justify'>{course.details.slice(0,100)}</p>
                     
                     
                     <div class="card-actions">

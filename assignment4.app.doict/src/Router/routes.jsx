@@ -6,11 +6,13 @@ import ProductDetailPage from "../Pages/ProductDetailPage";
 import Loginpage from "../Pages/Loginpage";
 import Registrationpage from "../Pages/Registrationpage";
 import PrivateRoute from "./PrivateRoute";
+import DisplayError from "../Pages/DisplayError";
 
 const router=createBrowserRouter([
     {
         path:`/`,
         element:<CommonLayout/>,
+        errorElement:<DisplayError/>,
         children:[
             {
                 path:`/`,

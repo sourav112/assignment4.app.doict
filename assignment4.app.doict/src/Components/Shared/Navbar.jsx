@@ -24,11 +24,11 @@ export default function Navbar() {
       });
   };
   return (
-  <div className="navbar bg-base-100 fixed top-0 w-10/12 z-10 shadow-xl">
+  <div className="navbar bg-base-100 fixed top-0 w-full z-10 shadow-xl">
   <div className="navbar-start">
       <Link to="/" className='flex gap-2 justify-center items-center'>
           <img src={logo} alt="logo" width="40" height="20" />
-          <span>Hero</span>
+          <span>Course Hero</span>
       </Link>
   </div>
   <div class="navbar-center hidden lg:flex">

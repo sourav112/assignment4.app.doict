@@ -83,7 +83,7 @@ const Registrationpage = () => {
                 <button class="btn btn-info btn-outline w-full" type="submit">
                 <FontAwesomeIcon icon={faSave}/> Register
                 </button>
-                <p className='text-gray-700  text-sm font-bold'>
+                <p className='text-gray-700  text-sm font-bold text-center'>
                   Already Have an Account? Please <Link to="/login"> <span className='text-blue-600'>Login</span> </Link>
                 </p>
             </div>

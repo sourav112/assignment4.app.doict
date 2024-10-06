@@ -97,7 +97,7 @@ const Loginpage = () => {
                 <button onClick={handleGitHubSignin} class="btn btn-info btn-outline w-full mt-2" type="button">
                 <FontAwesomeIcon icon={faGithub}/>Continue With Github
                 </button>
-                <p className='text-gray-700 text-sm font-bold'>
+                <p className='text-gray-700 text-sm font-bold text-center'>
                   Not Have an Account? Please <Link to="/registration"> <span className='text-blue-600'>Register</span> </Link>
                 </p>
             </div>
