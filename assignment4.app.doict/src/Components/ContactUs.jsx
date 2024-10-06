@@ -3,29 +3,25 @@ import React from 'react'
 export default function ContactUs() {
   return (
     <div>
-        <section class="bg-blue-50 dark:bg-slate-800" id="contact">
+        <section class="bg-blue-50 dark:bg-slate-800 m-2" id="contact">
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div class="mb-4">
             <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
                 <p class="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200">
-                    Contact
+                    Contact US
                 </p>
-                <h2
-                    class="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl">
-                    Get in Touch
-                </h2>
-                <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">In hac habitasse platea
-                    dictumst
+                
+                <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">
+                    DoICT, Coxsbazar
                 </p>
             </div>
         </div>
         <div class="flex items-stretch justify-center">
             <div class="grid md:grid-cols-2">
                 <div class="h-full pr-6">
-                    <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
-                        Class aptent taciti sociosqu ad
-                        litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque
-                        sagittis ante, ac tincidunt sem venenatis ut.
+                    <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400 text-justify">
+                    Cox’s Bazar is a town on the southeast coast of Bangladesh. 
+                    It’s known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. Aggameda Khyang monastery is home to bronze statues and centuries-old Buddhist manuscripts. South of town, the tropical rainforest of Himchari National Park has waterfalls and many birds. North, sea turtles breed on nearby Sonadia Island.
                     </p>
                     <ul class="mb-6 md:mb-0">
                         <li class="flex">
@@ -40,10 +36,9 @@ export default function ContactUs() {
                                 </svg>
                             </div>
                             <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Our Address
-                                </h3>
-                                <p class="text-gray-600 dark:text-slate-400">1230 Maecenas Street Donec Road</p>
-                                <p class="text-gray-600 dark:text-slate-400">New York, EEUU</p>
+                                
+                                <p class="text-gray-600 dark:text-slate-400">Baharchora</p>
+                                <p class="text-gray-600 dark:text-slate-400">Coxsbazar, Bangladesh</p>
                             </div>
                         </li>
                         <li class="flex">
@@ -59,10 +54,9 @@ export default function ContactUs() {
                                 </svg>
                             </div>
                             <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Contact
-                                </h3>
+                               
                                 <p class="text-gray-600 dark:text-slate-400">Mobile: +1 (123) 456-7890</p>
-                                <p class="text-gray-600 dark:text-slate-400">Mail: tailnext@gmail.com</p>
+                                <p class="text-gray-600 dark:text-slate-400">Mail: abcd@gmail.com</p>
                             </div>
                         </li>
                         <li class="flex">
@@ -74,11 +68,10 @@ export default function ContactUs() {
                                     <path d="M12 7v5l3 3"></path>
                                 </svg>
                             </div>
-                            <div class="ml-4 mb-4">
-                                <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Working
-                                    hours</h3>
-                                <p class="text-gray-600 dark:text-slate-400">Monday - Friday: 08:00 - 17:00</p>
-                                <p class="text-gray-600 dark:text-slate-400">Saturday &amp; Sunday: 08:00 - 12:00</p>
+                            <div class="ml-4 mb-4 flex items-center justify-center">
+                    
+                                <p class="text-gray-600 dark:text-slate-400">Sunday - Thursday: 09:00 - 17:00</p>
+                                
                             </div>
                         </li>
                     </ul>

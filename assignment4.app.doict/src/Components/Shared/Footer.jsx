@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 export default function Footer() {
   return (
     <div>
-      <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
+      <footer class="footer footer-center bg-blue-200 text-base-content rounded p-10">
   <nav class="grid grid-flow-col gap-4">
   <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
   <NavLink to="/courses" className={({ isActive }) => isActive ? "active" : ""}>Courses</NavLink>
@@ -47,7 +47,7 @@ export default function Footer() {
     </div>
   </nav>
   <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved by Sourav-39-DoICT-Coxsbazar</p>
   </aside>
 </footer>
     </div>

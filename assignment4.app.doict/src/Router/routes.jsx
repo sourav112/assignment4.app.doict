@@ -5,6 +5,7 @@ import Productpage from "../Pages/Productpage";
 import ProductDetailPage from "../Pages/ProductDetailPage";
 import Loginpage from "../Pages/Loginpage";
 import Registrationpage from "../Pages/Registrationpage";
+import PrivateRoute from "./PrivateRoute";
 
 const router=createBrowserRouter([
     {
@@ -21,7 +22,11 @@ const router=createBrowserRouter([
             },
             {
                 path:`/course/:id`,
-                element:<ProductDetailPage/>,
+                element: (
+                    <PrivateRoute>
+                        <ProductDetailPage/>
+                    </PrivateRoute>
+                ),
                 loader:({params})=>
                     fetch(`https://assignment4serverdoict.vercel.app/course/${params.id}`),
                 

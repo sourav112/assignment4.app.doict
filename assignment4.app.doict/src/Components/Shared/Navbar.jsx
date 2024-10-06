@@ -6,6 +6,9 @@ import userPic from "../../assets/user.png";
 import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignIn } from '@fortawesome/free-solid-svg-icons/faSignIn';
+import { faSave } from '@fortawesome/free-regular-svg-icons';
 
 export default function Navbar() {
   const { user, logOut } = useContext(AuthContext);
@@ -21,7 +24,7 @@ export default function Navbar() {
       });
   };
   return (
-  <div className="navbar bg-base-100 fixed top-0 w-3/4 z-10">
+  <div className="navbar bg-base-100 fixed top-0 w-10/12 z-10 shadow-xl">
   <div className="navbar-start">
       <Link to="/" className='flex gap-2 justify-center items-center'>
           <img src={logo} alt="logo" width="40" height="20" />
@@ -43,7 +46,7 @@ export default function Navbar() {
 )
 :(
 <div className="w-10 rounded-full">
-        <img alt="User" src={userPic} />
+       
   </div>
 )}
   {user && <span className="text-red-600 mr-3">{user.displayName}</span>}
@@ -56,10 +59,10 @@ export default function Navbar() {
             Logout
           </button>
         ) : (
-          <div>
+          <div className='flex'>
            
-    <Link to="/login"><button class="btn btn-outline btn-success">Login</button></Link>
-    <Link to="/registration" className='ml-2'><button class="btn btn-outline btn-warning">Register</button></Link>
+    <div className='tooltip tooltip-bottom tooltip-info' data-tip="Login Here"><Link to="/login"><button class="btn btn-outline btn-success"><FontAwesomeIcon icon={faSignIn}/> </button></Link></div>
+    <div className='tooltip tooltip-bottom tooltip-info' data-tip="Registration Here"><Link to="/registration" className='ml-2'><button class="btn btn-outline btn-warning"><FontAwesomeIcon icon={faSave}/> </button></Link></div>
     </div>
   )}
     <div class="dropdown">
@@ -83,8 +86,11 @@ export default function Navbar() {
         <li><NavLink to="/" className={({ isActive }) => isActive ? "active text-red-500 bg-orange-300" : ""}>Home</NavLink></li>
         <li><NavLink to="/courses" className={({ isActive }) => isActive ? "active text-red-500 bg-orange-300" : ""}>Courses</NavLink></li>
       </ul>
+      
     </div>
   </div>
+  
 </div>
+
   )
 }

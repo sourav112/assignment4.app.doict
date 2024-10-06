@@ -28,11 +28,13 @@ const OurCourses=() => {
         {
             courses.map((course)=>(
                 
-                <div class="card bg-base-100 w-96 shadow-xl m-5">
+                <div class="card bg-base-100 w-96 shadow-xl mt-5">
                 <figure class="px-10 pt-10">
                     <img
                     src={course.img_url}
                     alt={course.assessments}
+                    width="300"
+                    height="300"
                     class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">

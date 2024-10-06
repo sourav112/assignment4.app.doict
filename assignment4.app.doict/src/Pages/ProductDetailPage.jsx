@@ -14,7 +14,7 @@ const notify = () => toast.success(`${courseDetails.title} Successfully Added to
         <div class="p-4 max-w-md">
     <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
         <div className='relative'>
-            <img class=" w-full object-cover object-center" src={courseDetails.img_url} alt="blog"/>
+            <img class=" w-full object-cover object-center" width="300" height="300" src={courseDetails.img_url} alt="blog"/>
             <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">${courseDetails.price}
         </div>
         </div>
