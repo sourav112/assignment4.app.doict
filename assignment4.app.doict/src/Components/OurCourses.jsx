@@ -1,4 +1,6 @@
 
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
@@ -21,10 +23,10 @@ const OurCourses=() => {
   return (
     <div>
         <div>
-        <div className='bg-blue-300 mt-16'>
+        <div className='border-b-2 m-2 border-blue-600 mt-16'>
             <p className='text-center text-2xl p-2'>Our {courses.length} Courses</p>
         </div>
-        <div className='grid md:grid-cols-3 space-x-1 sm: grid-cols-1'>
+        <div className='grid md:grid-cols-3 space-x-2 m-10 sm: grid-cols-1'>
         {
             courses.map((course)=>(
                 
@@ -33,8 +35,8 @@ const OurCourses=() => {
                     <img
                     src={course.img_url}
                     alt={course.assessments}
-                    width="200"
-                    height="200"
+                    width="150"
+                    height="150"
                     class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
@@ -45,7 +47,7 @@ const OurCourses=() => {
                     
                     <div class="card-actions">
 
-                    <Link to={`/course/${course.course_id}`}><button class="btn btn-primary">Get Details</button></Link>
+                    <Link to={`/course/${course.course_id}`}><button class="btn btn-primary"><FontAwesomeIcon icon={faEye}/> Get Details</button></Link>
                     </div>
                 </div>
                 </div>

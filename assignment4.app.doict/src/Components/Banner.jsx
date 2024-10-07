@@ -8,7 +8,7 @@ export default function Banner() {
     <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
         <div className='content-center items-center text-center'>
         <p class="align-middle text-blue-600 text-2xl"> Welcome to Our Course Related Website.</p>
-        <Link to="/courses" className="btn btn-info w-32 mt-5 mb-5" role='button'>Courses</Link>
+        <Link to="/courses" className="btn btn-xs btn-outline btn-primary sm:btn-sm  md:btn-md lg:btn-lg mt-5 mb-5" role='button'>Courses</Link>
         </div>
         
         <div className='content-end'>

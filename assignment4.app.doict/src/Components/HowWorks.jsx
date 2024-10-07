@@ -1,9 +1,11 @@
 import React from 'react'
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function HowWorks() {
+  const notify = () => toast.success(`Welcome to Our Website`);
   return (
     <div>
-        <div className='bg-blue-300 m-2'>
+        <div className='bg-base-100 m-2 border-b-2 border-blue-600'>
             <p className='text-center text-2xl p-2'>How Our Website Works</p>
         </div>
         <div className='grid md:grid-cols-3 space-x-3 sm: grid-cols-1'>
@@ -20,7 +22,7 @@ export default function HowWorks() {
     <h2 class="card-title">How to Enroll</h2>
     <p className='text-justify'>To insert, register, or enter in a list, catalog, or roll. the school enrolls about 800 pupils.To to prepare a final perfect copy of (a bill passed by a legislature) in written or printed form</p>
     <div class="card-actions">
-      <button class="btn btn-primary">Check Here</button>
+      <button onClick={notify} class="btn btn-outline btn-success">Check Here</button>
     </div>
   </div>
 </div>
@@ -37,7 +39,7 @@ export default function HowWorks() {
     <h2 class="card-title">Course Routine</h2>
     <p className='text-justify'>Classroom routines are rituals or actions that are repeated time and time again. These routines that are repeated regularly provide students with a sense of security because they know what is expected of them.</p>
     <div class="card-actions">
-      <button class="btn btn-primary">Check Here</button>
+      <button onClick={notify} class="btn btn-outline btn-success">Check Here</button>
     </div>
   </div>
 </div>
@@ -54,7 +56,8 @@ export default function HowWorks() {
     <h2 class="card-title">Our Mentors</h2>
     <p className='text-justify'>Learning mentors help pupils who are experiencing difficulty at school. They work with students to tackle specific problems and to improve achievement levels. For example, they might work with a regular truant to increase punctuality.</p>
     <div class="card-actions">
-      <button class="btn btn-primary">Check Here</button>
+      <button onClick={notify} class="btn btn-outline btn-success">Check Here</button>
+      <Toaster position='bottom-right' />
     </div>
   </div>
 </div>
