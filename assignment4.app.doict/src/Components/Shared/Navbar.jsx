@@ -65,8 +65,8 @@ export default function Navbar() {
   <div class="navbar-end gap-4">
     {
       user?(
-  <div className="w-10 rounded-full">
-        <img alt="User" src={user.photoURL} />
+  <div className="w-6">
+        <img className='rounded-full' alt="User" width="40" height="20" src={user.photoURL} />
   </div>
 )
 :(
